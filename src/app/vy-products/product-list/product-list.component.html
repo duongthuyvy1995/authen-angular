@@ -1,0 +1,5 @@
+<p>List products</p>
+<div *ngFor="let prod of products">
+    {{prod.name}} has price {{prod.price}}
+</div>
+<button routerLink="/products/add-product" *ngIf="user.role == 'Admin'">Add product</button>

@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let ingredient of (ingredients | async).ingredients; let i = index"
+        (click)="onEditItem(i)"
+      >
+        {{ ingredient.name }} ({{ ingredient.amount }})
+      </a>
+    </ul>
+    <!-- <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let prod of (products | async).products; let i = index"
+      >
+        {{ prod.name }} price: {{ prod.price }}
+      </a>
+    </ul> -->
+  </div>
+</div>
